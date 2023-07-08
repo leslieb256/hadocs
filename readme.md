@@ -15,4 +15,5 @@ It was created by combining parts of the following two yaml sources:
   - https://gist.github.com/halomademeapc/f301822bcbf053783bb04f902c74865a#file-readme-md - for the pretty display
 
 The material design font used was: https://github.com/Templarian/MaterialDesign-Font
+
 Airgradient Air Quality Monitor - https://www.airgradient.com/
