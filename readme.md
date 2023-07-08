@@ -1,4 +1,5 @@
-# airgradient-prodiy.yaml
+## Files
+## airgradient-pro-diy.yaml
 The purpose of this yaml is to be used with ESP Home to allow the airgradient sensors to be picked up by home assistant.
 
 This airgradient pro diy yaml has been tested with my setup:
