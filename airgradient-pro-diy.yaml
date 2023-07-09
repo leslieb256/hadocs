@@ -87,7 +87,7 @@ font:
       "󰟤", #CO2
       "󰽕", #home thermometer outline
       "󰖎", #water percent
-      "󱞙", #smoke
+      "󰄻", #chemical-weapon
       "󰐸", #radiator
     ]
 
@@ -119,12 +119,12 @@ display:
         lambda: |-
           it.printf(84, 72, id(product), TextAlign::BOTTOM_RIGHT, "%.0f", id(pm_2_5).state);
           it.printf(84, 64, id(unit), TextAlign::BOTTOM_LEFT, "µg/m³");
-          it.printf(128, 0, id(icon), TextAlign::TOP_RIGHT, "󱞙");
+          it.printf(128, 0, id(icon), TextAlign::TOP_RIGHT, "󰄻");
           it.printf(86, 12, id(label), TextAlign::TOP_RIGHT, "Particulates");
       - id: page5
         lambda: |-
           it.printf(84, 72, id(product), TextAlign::BOTTOM_RIGHT, "%.0f", id(tvoc).state);
-          it.printf(84, 64, id(unit), TextAlign::BOTTOM_LEFT, "idx");
+          it.printf(84, 64, id(unit), TextAlign::BOTTOM_LEFT, "ind40");
           it.printf(128, 0, id(icon), TextAlign::TOP_RIGHT, "󰐸");
           it.printf(86, 12, id(label), TextAlign::TOP_RIGHT, "tVOC");
 
