@@ -74,7 +74,7 @@ font:
     id: unit
     size: 16
     glyphs: |
-      !"%°RHFCidx pmgµ³/
+      !"%°RHFCind40 pmgµ³/
   - file: "fonts/Roboto-Light.ttf"
     id: label
     size: 11
