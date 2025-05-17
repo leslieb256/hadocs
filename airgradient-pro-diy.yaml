@@ -12,7 +12,8 @@ esphome:
   # Automatically add the mac address to the name
   # so you can use a single firmware for all devices
   # name_add_mac_suffix: true
-  platform: ESP8266
+
+esp8266:
   board: d1_mini
 
 # Enable logging
@@ -25,6 +26,7 @@ api:
     key: !secret home_assistant_encryption_key
 
 ota:
+  platform: esphome
   password: !secret ota_password
 
 wifi:
@@ -41,6 +43,7 @@ wifi:
 # Used to support POST request to send data to AirGradient
 # https://esphome.io/components/http_request.html
 http_request:
+  verify_ssl: false
 
 # Creates a simple web server on the node that can be accessed through any browser
 # https://esphome.io/components/web_server.html
@@ -68,17 +71,17 @@ font:
   - file: "fonts/ProductSansRegular.ttf"
     id: product
     size: 42
-    glyphs: |
+    glyphs: >-
       0123456789 .na
   - file: "fonts/Roboto-Light.ttf"
     id: unit
     size: 16
-    glyphs: |
+    glyphs: >-
       !"%°RHFCind40 pmgµ³/
   - file: "fonts/Roboto-Light.ttf"
     id: label
     size: 11
-    glyphs: |
+    glyphs: >-
       HTVOPCD abcdeilmnoprstuxy
   - file: "fonts/MaterialDesignIcons.ttf"
     id: icon
@@ -156,7 +159,6 @@ interval:
             atmp: !lambda return to_string(id(temp).state);
             rhum: !lambda return to_string(id(humidity).state);
             tvoc: !lambda return to_string(id(tvoc).state);
-          verify_ssl: false
 uart:
   - rx_pin: D5
     tx_pin: D6
